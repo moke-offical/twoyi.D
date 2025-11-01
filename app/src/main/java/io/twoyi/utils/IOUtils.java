@@ -132,7 +132,7 @@ public class IOUtils {
             fileWriter.flush();
         } catch (Throwable ignored) {
         } finally {
-            IOUtils.closeSilently(fileWriter);
+            closeSilently(fileWriter);
         }
     }
 
@@ -153,7 +153,7 @@ public class IOUtils {
         } catch (Throwable ignored) {
             return null;
         } finally {
-            IOUtils.closeSilently(fileReader);
+            closeSilently(fileReader);
         }
     }
 

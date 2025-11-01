@@ -1,5 +1,5 @@
 <div align="center">
-    <p><b>Due to the complexity of the project and lack of any revenue, the project has been discontinued.</b></p>
+    <p><b>This is a fork of [Official Repository](https://github.com/twoyi/twoyi)</b></p>
 </div>
 
 <div align="center">
@@ -32,7 +32,7 @@
   <p>
     <a href="https://twoyi.io">
       <img
-        src="https://github.com/twoyi/twoyi/blob/main/assets/twoyi_screen.jpg?raw=true"
+        src="https://github.com/moke-offical/twoyi.D/blob/main/assets/twoyi_screen.jpg?raw=true"
         alt="Screenshot"
         width="25%"
       />
@@ -40,15 +40,13 @@
   </p>
 </div>
 
-[README 中文版](README_CN.md)
-
 ## Introduction
 
 Twoyi is a lightweight Android container. It runs a nearly complete Android system as a normal app (no root required) on Android. Additionally, it supports Android 8.1 ~ 12.
 
 ## Capability
 
-1. Use Taichi·Yang without unlocking the bootloader. Xposed, EdXposed and LSPosed will be supported.
+1. Xposed, EdXposed and LSPosed will be supported.
 2. Use root on non-rooted devices.
 3. Use a few Magisk modules.
 4. Implement additional system components such as virtual camera by virtualizing the HAL layer.
