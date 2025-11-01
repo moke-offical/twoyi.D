@@ -23,7 +23,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import com.cleveroad.androidmanimation.LoadingAnimationView;
 

@@ -8,8 +8,6 @@ package io.twoyi.utils;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ClipData;
@@ -28,7 +26,9 @@ import android.util.TypedValue;
 import android.webkit.WebView;
 import android.widget.Toast;
 
-import androidx.annotation.StringRes;
+import android.support.annotation.StringRes;
+import android.support.v4.app.AppCompatActivity;
+import android.support.v4.app.AlertDialog;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
@@ -110,7 +110,7 @@ public class UIHelper {
     }
 
     public static AlertDialog.Builder getDialogBuilder(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, android.support.design.R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog);
         builder.setIcon(R.mipmap.ic_launcher);
         return builder;
     }
@@ -187,7 +187,7 @@ public class UIHelper {
     public static void showPrivacy(Context context) {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            if (!(context instanceof Activity)) {
+            if (!(context instanceof AppCompatActivity)) {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             }
             intent.setData(Uri.parse("https://twoyi.app/privacy"));
@@ -199,7 +199,7 @@ public class UIHelper {
     public static void showFAQ(Context context) {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW);
-            if (!(context instanceof Activity)) {
+            if (!(context instanceof AppCompatActivity)) {
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             }
             intent.setData(Uri.parse("https://twoyi.app/guide"));
@@ -324,7 +324,7 @@ public class UIHelper {
 
         Intent intent = new Intent(context, clazz);
 
-        if (!(context instanceof Activity)) {
+        if (!(context instanceof AppCompatActivity)) {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
 

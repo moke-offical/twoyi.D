@@ -20,13 +20,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
-import androidx.core.util.Pair;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
+import android.support.v4.app.ActionBar;
+import android.support.v4.app.AppCompatActivity;
+import android.support.v4.content.FileProvider;
+import android.support.v4.util.Pair;
 
 import com.microsoft.appcenter.crashes.Crashes;
 

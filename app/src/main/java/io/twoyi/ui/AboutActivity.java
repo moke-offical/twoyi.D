@@ -6,7 +6,6 @@
 
 package io.twoyi.ui;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -16,10 +15,11 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.suooprt.v4.app.ActionBar;
+import android.support.v4.app.AppCompatActivity;
+import android.support.v4.app.AlertDialog;
 
 import java.util.Calendar;
 
@@ -222,7 +222,7 @@ public class AboutActivity extends AppCompatActivity {
 
     Element getLicenseElement() {
         Element license = new Element();
-        license.setTitle(getResources().getString(R.string.notices_title));
+        license.setTitle(getResources().getString(de.psdev.licensesdialog.R.string.notices_title));
         Notices notices = new Notices();
         notices.addNotice(new Notice("AndroidP7Zip", "https://github.com/hzy3774/AndroidP7zip",
                 "7-Zip Copyright (C) 1999-2020 Igor Pavlov.",new GnuLesserGeneralPublicLicense3()));
@@ -247,7 +247,7 @@ public class AboutActivity extends AppCompatActivity {
 
         license.setOnClickListener(v -> {
             LicensesDialog licensesDialog = new LicensesDialog.Builder(AboutActivity.this)
-                    .setThemeResourceId(R.style.Theme_AppCompat_DayNight_Dialog_Alert)
+                    .setThemeResourceId(android.support.v7.R.style.Theme_AppCompat_DayNight_Dialog_Alert)
                     .setNotices(notices)
                     .build();
             try {

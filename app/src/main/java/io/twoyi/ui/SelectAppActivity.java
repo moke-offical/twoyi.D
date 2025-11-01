@@ -36,12 +36,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.core.widget.CompoundButtonCompat;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActionBar;
+import android.support.v4.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
+import android.support.v7.widget.CompoundButtonCompat;
+import android.support.v7.view.MenuItemCompat;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.github.clans.fab.FloatingActionButton;
@@ -216,7 +217,7 @@ public class SelectAppActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.search_menu, menu);
         MenuItem searchItem = menu.findItem(R.id.menu_search);
 
-        SearchView searchView = (SearchView) searchItem.getActionView();
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         // 当SearchView获得焦点时弹出软键盘的类型，就是设置输入类型
         searchView.setIconified(false);
         searchView.onActionViewExpanded();

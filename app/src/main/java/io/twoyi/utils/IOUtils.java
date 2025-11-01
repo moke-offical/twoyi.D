@@ -8,7 +8,7 @@ package io.twoyi.utils;
 
 import android.text.TextUtils;
 
-import androidx.annotation.Keep;
+import android.support.annotation.Keep;
 
 import java.io.BufferedReader;
 import java.io.Closeable;

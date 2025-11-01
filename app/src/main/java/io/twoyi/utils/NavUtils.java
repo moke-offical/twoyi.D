@@ -6,7 +6,7 @@
 
 package io.twoyi.utils;
 
-import android.app.Activity;
+import android.support.v4.app.AppCompatActivity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.view.View;
@@ -23,7 +23,7 @@ public class NavUtils {
         void onNavigationState(boolean shown, int height);
     }
 
-    public static void isNavigationBarExist(Activity activity, final OnNavigationStateListener onNavigationStateListener) {
+    public static void isNavigationBarExist(AppCompatActivity activity, final OnNavigationStateListener onNavigationStateListener) {
         if (activity == null) {
             return;
         }

@@ -10,7 +10,7 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.Drawable;
 
-import androidx.annotation.NonNull;
+import android.support.annotation.NonNull;
 
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.DataSource;

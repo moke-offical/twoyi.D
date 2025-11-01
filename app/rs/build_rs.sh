@@ -6,4 +6,6 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
 
-cargo xdk -t arm64-v8a -o ../src/main/jniLibs build $1
+cargo install cargo-ndk
+rustup target add aarch64-linux-android
+cargo ndk -t arm64-v8a -o ../src/main/jniLibs build $1
